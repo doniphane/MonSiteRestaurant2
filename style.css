@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: cursive;
+    background-image: url(./images/Fond.png);
+    height: 100%;
+    width: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: orangered;
+    color: #fff;
+  }
+  
+  .nav-links a {
+    color: #fff;
+  }
+  
+  /* LOGO */
+  .logo {
+    font-size: 45px;
+
+  }
+  .logo span {
+    color: blue;
+    text-transform:capitalize;
+
+  }
+  
+  /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+  }
+  
+  .menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .menu li {
+    padding: 5px 14px;
+  }
+  
+.search{
+    font-size: 25px;
+}
+.search i{
+    padding:5px 20px;
+}
+
+
+/************principale**************/
+.principale{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:65px;
+    align-items:flex-end;
+}
+.droit{
+    width: 440px;
+    height: 440px;
+     background-image: url('./images/food4.jpg'); 
+    background-size:cover;
+    border-radius: 400px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+/**********gauche************/
+.gauche p:nth-child(1){
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+.gauche h1{
+    font-size: 90px;
+    color:white;
+}
+.gauche p:nth-child(3){
+    color: orange;
+    font-size: 30px;
+    font-style: italic;
+}
+.gauche button{
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 40px;
+    border:2px solid orangered;
+    background-color:transparent;
+    color:white;
+    margin:20px 0px;
+    
+}
+/*********Réseaux-sociaux***************/
+.Réseaux-sociaux{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 40px;
+    height: 200px;
+    background-color:orangered;
+    font-size: 30px;
+   
+}
+
+.Réseaux-sociaux i:hover {
+    color:white;
+}
+
+
+

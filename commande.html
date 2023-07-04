@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styleCommande.css">
+    <title>Commande</title>
+</head>
+<body>
+    <!-- menu -->
+          <!-- Fomulaire de commande  -->
+          <div class="contactez-nous">
+            <h3>Vous pouvez ici commander vos menu </h3>
+            <p>Contactez-nous</p>
+            <p>Vous voulez commander un menu ou reservez une table vous être au bonne endroit !  N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
+            <form action="/page-traitement-donnees" method="post">
+              <div>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required>
+              </div>
+              <div>
+                <label for="email">Votre e-mail</label>
+                <input type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
+              </div>
+              <div>
+                <label for="sujet">Lieux de reservation ?</label>
+                <select name="sujet" id="sujet" required>
+                    <option value="" disabled selected hidden>Choisissez votre reservation</option>
+                    <option value="Sur place">Sur place</option>
+                    <option value="A emporter">A emporter</option>
+                 </select>
+              </div>
+              <div>
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+              </div>
+              <div>
+                <button type="submit">Commander</button>
+              </div>
+            </form>
+          </div>
+      
+          <!-- fin Fomulaire de commande  -->
+</body>
+</html>
