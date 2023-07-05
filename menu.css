@@ -1,32 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
-
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-}
-
-body{
-	font-size: 1.7rem;
-	font-family: 'Merriweather Sans', sans-serif;
-	background-image: url(./images/Fond.png);
-	color: #ececec;
-	padding: 4rem;
-}
-
-h2{
-	text-align: center;
-	margin-bottom: 50px;
-	font-size: 50px;
-    color: white;
+	text-decoration: none;
+	list-style: none ;
+  }
   
-}
+  body{
+	font-family:'Courier New', Courier, monospace;
+	height: 100vh;
+	width: 100vw;
+	background-color: #333;
+  }
+  
+  
+  .navbar{
+	position: absolute;
+	padding:  50px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	box-sizing: border-box;
+	align-items: center;
+	background-color: orangered;
+  
+  }
+  
+  .navbar li:hover{
+	background-color: #4c9e9e;
+	border-radius: 15px;
+	transition: 0.3s ease;
+	backdrop-filter: blur(10px);
+  }
+  
+  .navbar a {
+  
+	color: white;
+	border-radius: 10px;
+  }
+  
+  .navbar {
+		font-size: 30px;
+		font-weight: bold;
+  }
+  
+  .logo {
+	font-size: 30px;
+  }
+  
+  
+  
+  .navbar .navlien ul{
+	display: flex;
+  
+  }
+  
+  .navbar .navlien ul li{
+	display: flex;
+	margin: 0 30px;
+  
+  }
+  
+  .navbar .menuhambuger {
+	display: none;
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	width: 35px;
+  
+  }
+  
+   /************barre de recherche **************/
+   .input-box{
+	position: relative;
+	height: 55px;
+	max-width: 55px;
+	width: 100%;
+	margin: 0 40px;
+	border-radius: 6px;
+	background-color: #fff;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .input-box.open{
+	max-width: 200px;
+  }
+  input{
+	position: relative;
+	outline: none;
+	border: none;
+	height: 100%;
+	width: 100%;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #333;
+	background-color: #fff;
+  }
+  .input-box.open{
+	padding: 0 15px 0 65px;
+  }
+  .icon{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	width: 60px;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+  }
+  .search-icon,
+  .close-icon{
+	position: absolute;
+	top: 50%;
+	font-size: 30px;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .search-icon{
+	color: orangered;
+	cursor: pointer;
+	
+	transform: translateY(-50%) rotate(90deg);
+  }
+  .input-box.open .search-icon{
+	transform: translateY(-50%) rotate(0);
+  }
+  .close-icon{
+	right: -45px;
+	color: #fff;
+	padding: 5px;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-50%);
+	cursor: pointer;
+	transition: all 0.5s;
+  }
+  .input-box.open .close-icon{
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(-50%) rotate(180deg);
+  }
 
+/************* carte************/
 .nouriture{
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
+	justify-content: space-between;
+	transform: translateY(300px);
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	
+
+	
+	
 }
 
 .nouriture2{
@@ -40,7 +166,7 @@ h2{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 	border-radius: 1.2rem;
 	margin: 2rem;
 }
@@ -51,7 +177,9 @@ h2{
 }
 
 .nouriture2:hover {
-	box-shadow: 5px 15px 25px #eeeeee;
+	box-shadow: 10px 15px 50px orangered;
+	
+
 }
 
 .nouriture2 img {
@@ -70,6 +198,120 @@ h2{
 	margin-top: 1rem;
 	font-size: 14px;
 	transition: all 0.2s;
+	text-transform: uppercase;
 }
 
 
+
+
+
+
+/************* fin de carte ******/
+
+
+
+
+
+
+  /************barre de recherche **************/
+
+
+  @media screen and (max-width: 768px) {
+	.navbar {
+	  padding: 0;
+	  z-index: 2;
+	}
+	.navbar .menuhambuger{
+	  display: block;
+	}
+  
+	.navlien {
+	  top: 0;
+	  left: 0;
+	 position: absolute;
+	 background-color: rgb(255, 255, 255, 0.20);
+	 backdrop-filter: blur(8px);
+	 width: 100%;
+	 height: 100vh;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin-left: -100%;
+	 transition: all 0.5s ease;
+  
+	}
+  
+	.navlien.mobilemenu{
+	  margin-left: 0;
+	}
+  
+	.navlien ul{
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  
+   
+	 }
+  
+	 .navbar .navlien ul li{
+	  margin:25px 0;
+	  font-size: 1.2em;
+  
+	
+	}
+  
+	.navbar .logo{
+	  position: absolute;
+	  top: 50px;
+	  left: 50px;
+  }
+  .icon{
+	display: none;
+  }
+  
+  .input-box{
+	display: none;
+  }
+
+  .cards_item {
+	width: 50%;
+  }
+  
+  .nouriture2{
+	width: 240px;
+	height: 200px;
+	cursor: pointer;
+  }
+
+  .nouriture2 img {
+	height: 100px;
+	cursor: pointer;
+	
+  }
+
+  .nouriture{
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	z-index: 1;
+	cursor: pointer;
+	transform: translateY(70px);
+	
+
+  }
+
+  .logo {
+	font-size: 25px;
+  }
+
+  .navbar a {
+  
+	color: black;
+	border-radius: 10px;
+  }
+
+  .nouriture2:hover {
+	box-shadow: 10px 15px 50px orangered;
+	cursor: pointer;
+}
+  }

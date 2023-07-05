@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
   
   body {
     font-family: cursive;
-    background-image: url(./images/Fond.png);
+    background-image: url(./images/Fond\ 2.jpg);
     height: 100%;
     width: 100%;
   }
@@ -25,7 +26,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: orangered;
+    background-color: rgb(255, 69, 0);
     color: #fff;
   }
   
@@ -60,15 +61,75 @@
   .menu li {
     padding: 5px 14px;
   }
-  
-.search{
-    font-size: 25px;
-}
-.search i{
-    padding:5px 20px;
-}
-
-
+  /************barre de recherche **************/
+  .input-box{
+    position: relative;
+    height: 55px;
+    max-width: 55px;
+    width: 100%;
+    margin: 0 40px;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .input-box.open{
+    max-width: 350px;
+  }
+  input{
+    position: relative;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    background-color: #fff;
+  }
+  .input-box.open{
+    padding: 0 15px 0 65px;
+  }
+  .icon{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 60px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+  }
+  .search-icon,
+  .close-icon{
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .search-icon{
+    color: orangered;
+    
+    transform: translateY(-50%) rotate(90deg);
+  }
+  .input-box.open .search-icon{
+    transform: translateY(-50%) rotate(0);
+  }
+  .close-icon{
+    right: -45px;
+    color: #fff;
+    padding: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  .input-box.open .close-icon{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) rotate(180deg);
+  }
+ /************barre de recherche **************/
 /************principale**************/
 .principale{
     display: flex;
@@ -79,7 +140,7 @@
 .droit{
     width: 440px;
     height: 440px;
-     background-image: url('./images/food4.jpg'); 
+     background-image: url('./images/'); 
     background-size:cover;
     border-radius: 400px;
     display: flex;
@@ -90,30 +151,36 @@
 /**********gauche************/
 .gauche p:nth-child(1){
     color: white;
-    font-size: 30px;
+    font-size: 50px;
     letter-spacing: 1px;
     font-style: italic;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #d60;
 }
 .gauche h1{
     font-size: 90px;
     color:white;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #d60;
 }
 .gauche p:nth-child(3){
-    color: orange;
-    font-size: 30px;
+    color: black;
+    font-size: 45px;
     font-style: italic;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #fff;
 }
-.gauche button{
-    width: 150px;
-    height: 30px;
-    font-size: 17px;
-    border-radius: 40px;
+/* .gauche button{
+    width: 220px;
+    height: 80px;
+    font-size: 35px;
+    border-radius: 80px;
     border:2px solid orangered;
     background-color:transparent;
     color:white;
     margin:20px 0px;
     
-}
+} */
 /*********Réseaux-sociaux***************/
 .Réseaux-sociaux{
     position: absolute;

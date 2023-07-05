@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html>
 <html lang="fr">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Menu</title>
-	<link rel="stylesheet" type="text/css" href="menu.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <title>test</title>
 </head>
 <body>
-	<section class="">
-		<h2>Voici les menu proposer dans mon restaurant</h2>
+
+  <nav class="navbar">
+    <a href="#" class="logo">Mon restaurant</a>
+    <div class="navlien">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="conexion.html">Conexion</a></li>
+        <li><a href="#">Incription</a></li>
+        <li><a href="commande.html">Commande</a></li>
+      </ul>
+
+    </div>
+    <img src="./images/burger-bar.png" alt="menuhambuger" class="menuhambuger">
+
+       <!--  barre de recherche  -->
+       <div class="input-box">
+        <input type="text" placeholder="recherche">
+        <span class="icon">
+            <i class="uil uil-search search-icon"></i>
+        </span>
+        <i class="uil uil-times close-icon"></i>
+    </div>
+  
+  </nav>
+ 
+  <!--page pricipale -->
+  <section class="menu">
 		<div class="nouriture">
 			<div class="nouriture2">
 				<img src="./images/durian-pancake-1203030_640.jpg">
@@ -48,5 +75,29 @@
 		</div>
 	</section>
 
+ <!--fin page pricipale -->
+
+  
 </body>
+<!-- script menu burger -->
+<script>
+ const menuhambuger = document.querySelector(".menuhambuger")
+        const navlien = document.querySelector(".navlien")
+
+        menuhambuger.addEventListener('click',()=>{
+          navlien.classList.toggle('mobilemenu')
+        })
+  
+   </script> 
+
+  <!-- script bar de recherche -->
+<script>
+  let inputBox = document.querySelector(".input-box"),
+      searchIcon = document.querySelector(".icon"),
+      closeIcon = document.querySelector(".close-icon");
+
+  searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
+  closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
+</script>
+  
 </html>

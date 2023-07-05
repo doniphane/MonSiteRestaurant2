@@ -1,5 +1,5 @@
 body{
-background-image: url(./images/Fond.png);
+background-color: #303030;
 }
 
 /**************Formulaire de commande*********/
@@ -9,8 +9,7 @@ background-image: url(./images/Fond.png);
     border-radius: 8px;
     padding: 0 50px 0 50px;
     background:orangered ;
-    margin: 50px;
-    padding: 50px;
+    
   }
   
   .contactez-nous p {

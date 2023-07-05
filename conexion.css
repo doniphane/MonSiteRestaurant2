@@ -1,61 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap') ;
+* {
+margin : 0;
+padding : 0;
+box-sizing : border-box;
+font-family : "Poppins", sans-serif;
+}
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: orangered;
+background-color : #333;
 }
-form {
-    border: 3px solid black;
-    padding: 5%;
-    margin: 5%;
+.navbar {
+position : absolute;
+padding : 50px;
+display : flex;
+justify-content : space-between;
+width : 100%;
+box-sizing : border-box;
+align-items : center;
+background-color : orangered;
 }
-
-h2{
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    margin: 1%;
-    text-transform: uppercase;
-   
+.navbar li:hover {
+background-color : #4c9e9e;
+border-radius : 15px;
+transition : 0.3s ease;
+backdrop-filter : blur(10px);
 }
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 5px solid black;
-  box-sizing: border-box;
+.navbar a {
+color : white;
+border-radius : 10px;
 }
-
-button {
-  background-color: azure;
-  color: black;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: 5px solid black;
-  cursor: pointer;
-  width: 100%;
+.navbar {
+font-size : 30px;
+font-weight : bold;
 }
-
-button:hover {
-  opacity: 0.8;
+.logo {
+font-size : 30px;
 }
-
-.annullerbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+.navbar .navlien ul {
+display : flex;
 }
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
+.navbar .navlien ul li {
+display : flex;
+margin : 0 30px;
 }
-
-.container {
-  padding: 16px;
+.navbar .menuhambuger {
+display : none;
+position : absolute;
+top : 50px;
+right : 50px;
+width : 35px;
 }
-
-span.modeâss {
-  float: right;
-  padding-top: 16px;
+.input-box {
+position : relative;
+height : 55px;
+max-width : 55px;
+width : 100%;
+margin : 0 40px;
+border-radius : 6px;
+background-color : #fff;
+transition : all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.input-box.open {
+max-width : 200px;
+}
+input {
+position : relative;
+outline : none;
+border : none;
+height : 100%;
+width : 100%;
+border-radius : 6px;
+font-size : 16px;
+font-weight : 400;
+color : #333;
+background-color : #fff;
+}
+.input-box.open {
+padding : 0 15px 0 65px;
+}
+.icon {
+position : absolute;
+height : 100%;
+top : 0;
+left : 0;
+width : 60px;
+border-radius : 6px;
+display : flex;
+justify-content : center;
+background-color : #fff;
+}
+.search-icon, .close-icon {
+position : absolute;
+top : 50%;
+font-size : 30px;
+transition : all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.search-icon {
+color : orangered;
+cursor : pointer;
+transform : translateY(-50%) rotate(90deg);
+}
+.input-box.open .search-icon {
+transform : translateY(-50%) rotate(0);
+}
+.close-icon {
+right : -45px;
+color : #fff;
+padding : 5px;
+opacity : 0;
+pointer-events : none;
+transform : translateY(-50%);
+cursor : pointer;
+transition : all 0.5s;
+}
+.input-box.open .close-icon {
+opacity : 1;
+pointer-events : auto;
+transform : translateY(-50%) rotate(180deg);
+}
+.section {
+position : relative;
+max-width : 470px;
+width : 100%;
+border-radius : 12px;
+padding : 20px 30px 120px;
+background : orangered;
+box-shadow : 5px 10px rgb(0, 0, 0, 0.1);
+overflow : hidden;
+display : flex;
+transform : translate(510px);
+transform : translateY(250px);
+left : 40%;
+}
+.formulaire.conexion {
+position : absolute;
+left : 50%;
+bottom : -86%;
+transform : translateX(-50%);
+width : calc(100% + 220px);
+padding : 20px 140px;
+border-radius : 50%;
+height : 100%;
+background : #fff;
+transition : all 0.6s ease;
+}
+.section.active .formulaire.conexion {
+bottom : -15%;
+border-radius : 35%;
+box-shadow : 0 -5px 10px rgb(0, 0, 0, 0.1);
+}
+.form header {
+font-size : 30px;
+text-align : center;
+color : #fff;
+font-weight : 600;
+cursor : pointer;
+}
+.formulaire .conexion header {
+color : red;
+opacity : 0.6;
+}
+.section.active .formulaire.conexion header {
+opacity : 1;
+}
+.section.active .signup header {
+opacity : 0.6;
+}
+.section form {
+display : flex;
+flex-direction : column;
+gap : 20px;
+margin-top : 40px;
+}
+form input {
+height : 60px;
+outline : none;
+border : none;
+padding : 0 15px;
+font-size : 16px;
+font-weight : 400;
+color : #333;
+border-radius : 8px;
+background : #fff;
+}
+.formulaire.conexion input {
+border : #aaa solid 1px;
+}
+.formulaire.conexion input:focus {
+box-shadow : 0 1px 0 #ddd;
+}
+form a {
+color : #333;
+text-decoration : none;
+}
+form a:hover {
+text-decoration : underline;
+}
+form input[type="submit"] {
+margin-top : 15px;
+font-size : 18px;
+font-weight : 500;
+cursor : pointer;
+}
+.formulaire.conexion input[type="submit"] {
+background : #4070f4;
+color : #fff;
+border : none;
+}
+@media screen and (max-width: 768px) {
+.navbar {
+padding : 0;
+z-index : 2;
+}
+.navbar .menuhambuger {
+display : block;
+}
+.navlien {
+top : 0;
+left : 0;
+position : absolute;
+background-color : rgb(255, 255, 255, 0.20);
+backdrop-filter : blur(8px);
+width : 100%;
+height : 100vh;
+display : flex;
+justify-content : center;
+align-items : center;
+margin-left : -100%;
+transition : all 0.5s ease;
+}
+.navlien.mobilemenu {
+margin-left : 0;
+}
+.navlien ul {
+display : flex;
+flex-direction : column;
+align-items : center;
+}
+.navbar .navlien ul li {
+margin : 25px 0;
+font-size : 1.2em;
+}
+.navbar .logo {
+position : absolute;
+top : 50px;
+left : 50px;
+}
+.icon {
+display : none;
+}
+.input-box {
+display : none;
+}
+.cards_item {
+width : 50%;
+}
+.logo {
+font-size : 25px;
+}
+.navbar a {
+color : black;
+border-radius : 10px;
+}
+.nouriture2:hover {
+box-shadow : 10px 15px 50px orangered;
+cursor : pointer;
+}
 }
