@@ -7,6 +7,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <title>test</title>
+
+  <!-- script menu burger -->
+<script>
+	const menuhambuger = document.querySelector(".menuhambuger")
+		   const navlien = document.querySelector(".navlien")
+   
+		   menuhambuger.addEventListener('click',()=>{
+			 navlien.classList.toggle('mobilemenu')
+		   })
+	 
+	  </script> 
+   
+	 <!-- script bar de recherche -->
+   <script>
+	 let inputBox = document.querySelector(".input-box"),
+		 searchIcon = document.querySelector(".icon"),
+		 closeIcon = document.querySelector(".close-icon");
+   
+	 searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
+	 closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
+   </script>
 </head>
 <body>
 
@@ -39,7 +60,7 @@
   <section class="menu">
 		<div class="nouriture">
 			<div class="nouriture2">
-				<img src="./images/durian-pancake-1203030_640.jpg">
+				<img src="./images/durian-pancake-1203030_640.jpg" alt="duriane">
 				<div class="">
 					<h4>durian-pancake</h4>
 					<p>12€</p>
@@ -48,7 +69,7 @@
 				</div>
 			</div>
 			<div class="nouriture2">
-				<img src="./images/fish-762828_640.jpg">
+				<img src="./images/fish-762828_640.jpg" alt="duriane">
 				<div class="">
 					<h4>Poisson Frite</h4>
 					<p >12€</p>
@@ -57,7 +78,7 @@
 				</div>
 			</div>
 			<div class="nouriture2">
-				<img src="./images/food4.jpg">
+				<img src="./images/food4.jpg" alt="duriane">
 				<div class="product-info">
 					<h4>saumon frit</h4>
 					<p>12€</p>
@@ -66,7 +87,7 @@
 				</div>
 			</div>
 			<div class="nouriture2">
-				<img src="./images/food-712665_1280.jpg">
+				<img src="./images/food-712665_1280.jpg" alt="duriane">
 					<h4>Saumon persié</h4>
 					<p>12€</p>
 					<a href="#">Commander</a>
@@ -79,25 +100,6 @@
 
   
 </body>
-<!-- script menu burger -->
-<script>
- const menuhambuger = document.querySelector(".menuhambuger")
-        const navlien = document.querySelector(".navlien")
 
-        menuhambuger.addEventListener('click',()=>{
-          navlien.classList.toggle('mobilemenu')
-        })
-  
-   </script> 
-
-  <!-- script bar de recherche -->
-<script>
-  let inputBox = document.querySelector(".input-box"),
-      searchIcon = document.querySelector(".icon"),
-      closeIcon = document.querySelector(".close-icon");
-
-  searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
-  closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
-</script>
   
 </html>
